@@ -265,9 +265,9 @@ impl KeypadPage {
             Self::AddScore(_)
             | Self::Penalty(_, _, _, _, _)
             | Self::FoulAdd { .. }
-            | Self::WarningAdd { .. } => 99,
+            | Self::WarningAdd { .. }
+            | Self::TeamTimeouts(_) => 99,
             Self::GameNumber => 9999,
-            Self::TeamTimeouts(_) => 999,
         }
     }
 

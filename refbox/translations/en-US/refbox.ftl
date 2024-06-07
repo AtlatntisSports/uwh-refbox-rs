@@ -15,7 +15,8 @@ new = NEW
 total-dismissial = TD
 
 # Team Timeout Edit
-timeout-length = TIMEOUT LENGTH
+timeout-length = TEAM TIMEOUT
+    LENGTH
 
 # Warning Add
 team-warning = TEAM
@@ -160,7 +161,7 @@ team-to-len = Team Timeout Duration: { $to_len }
 time-btwn-games = Nominal Time Between Games: { $time_btwn }
 min-brk-btwn-games = Minimum Time Between Games: { $min_brk_time }
 stop-clock-last-2-min = Stop clock in last 2 minutes: Unknown
-refs = Cheif ref: Unknown
+refs = Chief ref: Unknown
         Timer: Unknown
         Water ref 1: Unknown
         Water ref 2: Unknown
@@ -260,8 +261,8 @@ player-number = PLAYER
     NUMBER:
 game-number = GAME
     NUMBER:
-num-tos-per-half = NUM T/Os
-    PER HALF:
+num-tos-per-half = NUM OF TEAM
+    T/Os PER HALF:
 
 # Sound Controller - mod
 off = OFF
