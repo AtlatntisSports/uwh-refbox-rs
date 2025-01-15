@@ -217,8 +217,6 @@ pub struct SoundController {
     stop_tx: Sender<bool>,
     tasks: Vec<JoinHandle<()>>,
     #[cfg(target_os = "linux")]
-    remote_id_rx: Option<Receiver<u32>>,
-    #[cfg(target_os = "linux")]
     _pins: Option<(InputPin, InputPin)>,
 }
 

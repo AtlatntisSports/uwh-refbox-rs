@@ -206,7 +206,7 @@ pub fn build_levels_table(levels: &[Level], second_chart: bool) -> Container<Mes
         .spacing(CHART_PADDING)
         .push(
             Container::new(
-                Text::new(format!("Level"))
+                Text::new("Level")
                     .width(Length::Fixed(69.0))
                     .size(16)
                     .horizontal_alignment(Horizontal::Center),
@@ -217,7 +217,7 @@ pub fn build_levels_table(levels: &[Level], second_chart: bool) -> Container<Mes
         .spacing(CHART_PADDING)
         .push(
             Container::new(
-                Text::new(format!("Count"))
+                Text::new("Count")
                     .width(Length::Fixed(69.0))
                     .size(16)
                     .horizontal_alignment(Horizontal::Center),
@@ -228,7 +228,7 @@ pub fn build_levels_table(levels: &[Level], second_chart: bool) -> Container<Mes
         .spacing(CHART_PADDING)
         .push(
             Container::new(
-                Text::new(format!("Duration"))
+                Text::new("Duration")
                     .width(Length::Fixed(69.0))
                     .size(16)
                     .horizontal_alignment(Horizontal::Center),
