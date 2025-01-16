@@ -1,5 +1,4 @@
 use crate::app::update_sender::ServerMessage;
-use arrayref::array_ref;
 use derivative::Derivative;
 use enum_derive_2018::{EnumDisplay, EnumFromStr};
 use log::*;
@@ -191,7 +190,7 @@ pub struct SoundController {
 
 impl SoundController {
     #[cfg_attr(not(target_os = "linux"), allow(unused_mut))]
-    pub fn new<F>(mut settings: SoundSettings, trigger_flash: F) -> Self
+    pub fn new<F>(settings: SoundSettings, trigger_flash: F) -> Self
     where
         F: Send
             + Fn() -> Result<(), tokio::sync::mpsc::error::TrySendError<ServerMessage>>
@@ -269,7 +268,7 @@ impl SoundController {
         });
 
         #[cfg_attr(not(target_os = "linux"), allow(unused_mut))]
-        let mut tasks = vec![handler];
+        let tasks = vec![handler];
 
         Self {
             _context: context,
