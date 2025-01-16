@@ -312,7 +312,7 @@ impl SoundController {
         let mut tasks = vec![handler];
 
         #[cfg(target_os = "linux")]
-        let (_pins, remote_id_rx) = if let Ok(sys_info) = rppal::system::DeviceInfo::new() {
+        let (_pins) = if let Ok(sys_info) = rppal::system::DeviceInfo::new() {
             info!("Detected a Raspberry Pi system: {sys_info:?}, starting GPIO processes");
 
             let gpio = Gpio::new().unwrap();
