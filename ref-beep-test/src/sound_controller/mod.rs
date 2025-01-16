@@ -17,10 +17,7 @@ use rppal::gpio::{Gpio, InputPin, Level, Trigger};
 use serde::{Deserialize, Serialize};
 use std::sync::Arc;
 #[cfg(target_os = "linux")]
-use tokio::{
-    sync::watch::Receiver,
-    time::{sleep_until, Instant},
-};
+use tokio::time::{sleep_until, Instant};
 use tokio::{
     sync::{
         mpsc::{unbounded_channel, UnboundedSender},
@@ -537,8 +534,6 @@ impl SoundController {
             settings_tx,
             stop_tx,
             tasks,
-            #[cfg(target_os = "linux")]
-            remote_id_rx,
             #[cfg(target_os = "linux")]
             _pins,
         }
