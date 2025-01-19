@@ -19,8 +19,6 @@ use serde::{Deserialize, Serialize};
 #[cfg(feature = "std")]
 use time::Duration as SignedDuration;
 
-use image::load_from_memory;
-use image::DynamicImage;
 use std::borrow::Cow;
 
 const PANEL_PENALTY_COUNT: usize = 3;
